@@ -1,0 +1,14 @@
+[package]
+name = "native"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = {version = "0.2.80", features =["serde-serialize"]}
+getrandom = { version = "0.2", features = ["js"] }
+jungle-chess = {git = "https://github.com/arnemileswinter/jungle-chess", tag = "v1.2.0"}
+serde_json = { version = "1.0.81" }
+serde = { version = "1.0.137", features = ["derive"]}

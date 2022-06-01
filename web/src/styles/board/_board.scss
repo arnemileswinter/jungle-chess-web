@@ -1,0 +1,93 @@
+$cell-size: #{min(100vw / 8,100vh / 10 )};
+$cell-margin: 1px;
+$cell-margin-hovered: 2px;
+$border-width: 2px;
+$border-darkening: 15%;
+$border-highlight-darkening: 5%;
+$border-highlight-lightening: 5%;
+$red: #EB3202;
+$blue: #086794;
+$water: #0A435F;
+$trap: #975408;
+$grass: #066B32;
+
+@mixin ground ($color) {
+    background: $color;
+    border-radius: 0;
+    border: $border-width solid darken($color, $border-darkening);
+    transition: margin 100ms;
+    margin: $cell-margin;
+    cursor: pointer;
+
+    &:hover{
+        margin: $cell-margin-hovered;
+        border: $border-width solid darken($color,$border-highlight-darkening);
+    }
+    &:focus  {
+        margin: $cell-margin;
+        border: $border-width solid lighten($color,$border-highlight-lightening);
+        background: lighten($color,$border-highlight-lightening);
+    }
+}
+
+
+#board{
+    padding: 0;
+    display: grid;
+    grid-template-rows: $cell-size $cell-size $cell-size $cell-size $cell-size
+                        $cell-size $cell-size $cell-size $cell-size;
+    grid-template-columns: $cell-size $cell-size $cell-size $cell-size
+                           $cell-size $cell-size $cell-size;
+
+    .tile{
+        &.grass {
+            @include ground($grass);
+        }
+        &.water {
+            @include ground($water);
+        }
+        &.den.red {
+            @include ground($red);
+        }
+        &.den.blue {
+            @include ground($blue);
+        }
+        &.trap {
+            @include ground($trap);
+        }
+
+        &.piece.blue {
+            @include ground($blue);
+        }
+        &.piece.red {
+            @include ground($red);
+        }
+
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            z-index: 10;
+            width: 90%;
+
+            &.trap, &.target, &.den {
+                position:absolute;
+            }
+
+            &.trap, &.den {
+                z-index:9;
+            }
+            &.target {
+                z-index:11;
+            }
+        }
+
+        &:hover{
+            img{
+                width: 85%;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="39.855824mm"
+   height="39.857651mm"
+   viewBox="0 0 39.855824 39.857651"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="animals.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="308.6521"
+     inkscape:cy="760.84688"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-25.69904,-183.68542)">
+    <path
+       style="color:#000000;fill:#ff6600;stroke:#803300;stroke-width:1.11823;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="m 45.626953,184.24455 c -10.670951,0 -19.368796,8.69785 -19.368796,19.3688 0,10.67094 8.697845,19.37061 19.368796,19.37061 10.670951,0 19.368796,-8.69967 19.368796,-19.37061 0,-10.67095 -8.697845,-19.36879 -19.368796,-19.3688 z m 0,4.47365 c 8.253611,0 14.896974,6.64154 14.896974,14.89515 0,8.2536 -6.643363,14.89697 -14.896974,14.89697 -8.253611,0 -14.896974,-6.64337 -14.896974,-14.89697 0,-8.25361 6.643363,-14.89515 14.896974,-14.89515 z"
+       id="path523"
+       inkscape:export-filename="../Projects/jungle-chess-web/web/assets/animals/den.svg"
+       inkscape:export-xdpi="278.91901"
+       inkscape:export-ydpi="278.91901" />
+  </g>
+</svg>
