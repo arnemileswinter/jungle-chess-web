@@ -19,6 +19,17 @@ function switchPlayer(){
     } else if(playerToTurn === "red"){
         playerToTurn = "blue";
     }
+    displayPlayerTurn();
+}
+
+function displayPlayerTurn(){
+    const toTurnEl = document.getElementById("to-turn");
+    toTurnEl.innerHTML = "<b class=" + playerToTurn + ">" + playerToTurn + "</b>'s turn";
+}
+
+function hidePlayerTurn(){
+    const toTurnEl = document.getElementById("to-turn");
+    toTurnEl.innerHTML = "";
 }
 
 function tileID(x,y){
@@ -43,6 +54,12 @@ function tileTarget(x, y, onClick){
     targets.push({img,abort: () => controller.abort()});
 }
 
+function makeAIMove(){
+    make_ai_move(playerToTurn, botDifficulty);
+    switchPlayer();
+    fetchMoves();
+}
+
 function makeMove(fromX,fromY,toX,toY){
     make_move(playerToTurn,fromX,fromY,toX,toY);
     clearTargets();
@@ -50,9 +67,7 @@ function makeMove(fromX,fromY,toX,toY){
     if(!isBotGame) {
         fetchMoves();
     } else {
-        make_ai_move(playerToTurn, botDifficulty);
-        switchPlayer();
-        fetchMoves();
+        makeAIMove();
     }
 }
 
@@ -77,6 +92,7 @@ function tileClicked(x,y){
 
 function newGame(){
     new_game();
+    displayPlayerTurn();
     fetchMoves();
 }
 
@@ -208,8 +224,6 @@ function main(){
         const aiDifficulty = document.getElementById("ai-difficulty");
         const newAIGame = document.getElementById("new-ai-game");
 
-
-
         newLocalGame.onclick = () => {
             isBotGame = false;
             newGame();
@@ -224,8 +238,11 @@ function main(){
                     break;
                 }
             }
-            console.log("difficulty is", botDifficulty);
+            const playAsRed = document.getElementById("play-as-red").checked;
             newGame();
+            if (playAsRed) {
+                makeAIMove();
+            }
         }
     });
 }

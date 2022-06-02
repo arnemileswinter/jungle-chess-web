@@ -1,10 +1,11 @@
 @import './variables';
 @import './messages';
+@import './to_turn';
 @import './board';
 
 body {
     background: #222;
-    padding: 0;
+    padding: 1em;
     margin: 0;
     display: flex;
     align-items: center;

@@ -1,0 +1,15 @@
+
+#to-turn {
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: $button-color;
+
+    b.red {
+        color: $red;
+    }
+    b.blue {
+        color: $blue;
+    }
+}

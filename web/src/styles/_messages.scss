@@ -1,11 +1,18 @@
 #messages {
+    @for $i from 1 through 6 {
+        h#{$i} {
+            text-align: center;
+        }
+    }
+
     font-size: 2em;
+    font-family: sans-serif;
 
     &.hide{
         display: none;
     }
 
-    position: fixed;
+    position: absolute;
     top: $messages-margin-top;
     background: $background-messages;
     padding: $messages-padding;
@@ -16,11 +23,12 @@
         word-wrap: none;
     }
 
-    .ai-levels {
+    .ai-levels, .choose-color {
         display: flex;
         justify-content: space-around;
 
-        font-family: sans-serif;
+
+        .red {color: $red;}
     }
 
     button.new-game{
@@ -40,12 +48,18 @@
             border: $border-width solid darken($button-color,$border-highlight-darkening);
         }
     }
+
+    .instructions {
+        text-align: center;
+        img {
+            height: 0.8em;
+        }
+    }
 }
 
 #winner {
     font-size: 3em;
     text-transform: uppercase;
-    font-family: sans-serif;
 
     &.blue {color: $blue;}
     &.red {color: $red;}

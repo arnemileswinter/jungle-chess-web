@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "release": "webpack --mode production"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
