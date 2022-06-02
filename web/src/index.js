@@ -1,11 +1,13 @@
 import "./styles/style.scss"
 
-import init, {new_game, make_move, get_next_moves} from "native"
+import init, {new_game, make_move, get_next_moves, make_ai_move} from "native"
 import {setImportObject} from "native/snippets/native-b653630efb6aa1b2/index"
 
 let nextMoves = [];
 let playerToTurn = "blue";
 let targets = [];
+let isBotGame = false;
+let botDifficulty = 1;
 
 function fetchMoves(){
     nextMoves = get_next_moves(playerToTurn).Ok;
@@ -45,7 +47,13 @@ function makeMove(fromX,fromY,toX,toY){
     make_move(playerToTurn,fromX,fromY,toX,toY);
     clearTargets();
     switchPlayer();
-    fetchMoves();
+    if(!isBotGame) {
+        fetchMoves();
+    } else {
+        make_ai_move(playerToTurn, botDifficulty);
+        switchPlayer();
+        fetchMoves();
+    }
 }
 
 function clearTargets(){
@@ -76,6 +84,9 @@ function main(){
     setImportObject({
         clear(){
             playerToTurn = "blue";
+            const messages = document.getElementById("messages");
+            messages.classList.add("hide");
+
             const root = document.getElementById("board");
             root.innerHTML = "";
             for(let y=0;y<9;++y){
@@ -135,17 +146,13 @@ function main(){
             clearTargets();
             const root = document.getElementById("board");
             root.innerHTML = "";
-            const title = document.createElement("h1");
-            title.innerHTML = "Player " + who + " won!";
-            title.classList.add("won");
 
-            const newGameBtn = document.createElement("button");
-            newGameBtn.classList.add("new-game");
-            newGameBtn.innerHTML = "Rematch";
-            newGameBtn.onclick = () => newGame();
+            const messages = document.getElementById("messages");
+            messages.classList.remove("hide");
 
-            root.appendChild(title);
-            root.appendChild(newGameBtn);
+            const winnerEl = document.getElementById("winner");
+            winnerEl.innerHTML = "Player " + who + " won!";
+            winnerEl.className = who;
         },
         movedPiece(fromX,fromY,toX,toY,who,captured) {
             const oldEl = tileEl(fromX,fromY);
@@ -197,8 +204,30 @@ function main(){
         }
     });
     init().then(() => {
-        newGame();
+        const newLocalGame = document.getElementById("new-local-game");
+        const aiDifficulty = document.getElementById("ai-difficulty");
+        const newAIGame = document.getElementById("new-ai-game");
+
+
+
+        newLocalGame.onclick = () => {
+            isBotGame = false;
+            newGame();
+        };
+        newAIGame.onclick = () => {
+            isBotGame = true;
+            const difficultyButtons = document.querySelectorAll('input[name="ai-level"]');
+            for (const difficultyButton of difficultyButtons) {
+                console.log(difficultyButton);
+                if (difficultyButton.checked){
+                    botDifficulty = parseInt(difficultyButton.value);
+                    break;
+                }
+            }
+            console.log("difficulty is", botDifficulty);
+            newGame();
+        }
     });
 }
 
-main();
+document.addEventListener('DOMContentLoaded', () => main(), {once:true});

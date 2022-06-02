@@ -1,0 +1,51 @@
+#messages {
+    font-size: 2em;
+
+    &.hide{
+        display: none;
+    }
+
+    position: fixed;
+    top: $messages-margin-top;
+    background: $background-messages;
+    padding: $messages-padding;
+
+    border: $border-width solid darken($background-messages, $border-darkening);
+
+    label {
+        word-wrap: none;
+    }
+
+    .ai-levels {
+        display: flex;
+
+        font-family: sans-serif;
+    }
+
+    button.new-game{
+        margin-bottom: 1em;
+        display: block;
+        width: 100%;
+        font-size: 2em;
+        font-weight: bold;
+        background: $button-color;
+        border: $border-width solid darken($button-color, $border-darkening);
+
+        &:hover {
+            border: $border-width solid lighten($button-color, $border-highlight-lightening);
+        }
+
+        &:active {
+            border: $border-width solid darken($button-color,$border-highlight-darkening);
+        }
+    }
+}
+
+#winner {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: sans-serif;
+
+    &.blue {color: $blue;}
+    &.red {color: $red;}
+}

@@ -6,5 +6,24 @@
     </head>
     <body>
         <div id="board"></div>
+        <div id="messages">
+            <h1 id="winner"></h1>
+            <div id="controls">
+                <div>
+                    <button id="new-local-game" class="new-game">Local Game</button>
+                </div>
+                <div>
+                    <div class="ai-levels">
+                        <input id="ai-level-1" type="radio" name="ai-level" value="1" checked="checked"/>
+                        <label for="ai-level-1">Level 1</label>
+                        <input id="ai-level-2" type="radio" name="ai-level" value="2"/>
+                        <label for="ai-level-2">Level 2</label>
+                        <input id="ai-level-3" type="radio" name="ai-level" value="3"/>
+                        <label for="ai-level-3">Level 3</label>
+                    </div>
+                    <button id="new-ai-game" class="new-game">AI Game</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
