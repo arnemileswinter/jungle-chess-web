@@ -2,7 +2,7 @@
 
 Play jungle chess in your browser - local or vs an AI.
 
-Checkout the [demo](https://example.com) on github pages.
+Checkout the [demo](https://arnemileswinter.github.io/jungle-chess-web) on github pages.
 
 ![](screenshot.png)
 

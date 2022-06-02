@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21.942574mm"
+   height="21.943542mm"
+   viewBox="0 0 21.942574 21.943542"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="animals.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="206.82873"
+     inkscape:cy="914.99615"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-34.655663,-237.34863)">
+    <path
+       style="color:#000000;fill:#ff0000;stroke:#aa0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="m 45.626953,237.94863 c -5.713909,0 -10.37129,4.65738 -10.37129,10.37129 0,5.7139 4.657381,10.37226 10.37129,10.37226 5.713909,0 10.37129,-4.65836 10.37129,-10.37226 0,-5.71391 -4.657381,-10.37129 -10.37129,-10.37129 z m 0,2.39548 c 4.41951,0 7.976791,3.5563 7.976791,7.97581 0,4.4195 -3.557281,7.97679 -7.976791,7.97679 -4.41951,0 -7.976791,-3.55729 -7.976791,-7.97679 0,-4.41951 3.557281,-7.97581 7.976791,-7.97581 z"
+       id="path5073"
+       inkscape:export-filename="../Projects/jungle-chess-web/web/assets/animals/den.svg"
+       inkscape:export-xdpi="278.91901"
+       inkscape:export-ydpi="278.91901" />
+    <path
+       style="color:#000000;fill:#ff0000;stroke:#aa0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="m 45.626953,243.7493 c -2.518266,0 -4.570893,2.05262 -4.570893,4.57089 0,2.51826 2.052627,4.57132 4.570893,4.57132 2.518266,0 4.570893,-2.05306 4.570893,-4.57132 0,-2.51827 -2.052627,-4.57089 -4.570893,-4.57089 z m 0,1.05575 c 1.947791,0 3.515576,1.56735 3.515576,3.51514 0,1.94779 -1.567785,3.51558 -3.515576,3.51558 -1.947791,0 -3.515576,-1.56779 -3.515576,-3.51558 0,-1.94779 1.567785,-3.51514 3.515576,-3.51514 z"
+       id="path5075"
+       inkscape:export-filename="../Projects/jungle-chess-web/web/assets/animals/den.svg"
+       inkscape:export-xdpi="278.91901"
+       inkscape:export-ydpi="278.91901" />
+  </g>
+</svg>

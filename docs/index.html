@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <a href="https://github.com/arnemileswinter/jungle-chess-web">
+            <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/arnemileswinter/jungle-chess-web?style=social">
+        </a>
+        <div id="board"></div>
+        <div id="to-turn"></div>
+        <div id="messages">
+            <h1 id="winner">
+                Jungle Chess
+            </h1>
+            <div id="controls">
+                <div>
+                    <button id="new-local-game" class="new-game">Local Game</button>
+                </div>
+                <div>
+                    <div class="choose-color">
+                        <div>
+                            <input id="play-as-red" type="checkbox"></input>
+                            <label for="play-as-red">Play as <b class="red">red</b></label>
+                        </div>
+                    </div>
+                    <button id="new-ai-game" class="new-game">AI Game</button>
+                    <div class="ai-levels">
+                        <div>
+                        <input id="ai-level-1" type="radio" name="ai-level" value="1" checked="checked"/>
+                        <label for="ai-level-1">Level 1</label>
+                        </div>
+
+                        <div>
+                            <input id="ai-level-2" type="radio" name="ai-level" value="2"/>
+                            <label for="ai-level-2">Level 2</label>
+                        </div>
+                        <div>
+                            <input id="ai-level-3" type="radio" name="ai-level" value="3"/>
+                            <label for="ai-level-3">Level 3</label>
+                        </div>
+                        <div>
+                            <input id="ai-level-4" type="radio" name="ai-level" value="4"/>
+                            <label for="ai-level-4">Level 4</label>
+                        </div>
+                    </div>
+                </div>
+                <section class="instructions">
+                    <h2> How to play </h2>
+                    <p>
+                        The following hierarchy holds - stronger pieces capture weaker pieces:</br>
+                        <img src="assets/cat.svg" alt="cat"> beats <img src="assets/rat.svg" alt="rat"> </br>
+                        <img src="assets/dog.svg" alt="dog"> beats <img src="assets/cat.svg" alt="cat"> </br>
+                        <img src="assets/wolf.svg" alt="wolf"> beats <img src="assets/dog.svg" alt="dog"></br>
+                        <img src="assets/leopard.svg" alt="leopard"> beats <img src="assets/wolf.svg" alt="wolf"></br>
+                        <img src="assets/tiger.svg" alt="tiger"> beats <img src="assets/leopard.svg" alt="leopard"></br>
+                        <img src="assets/lion.svg" alt="lion"> beats <img src="assets/tiger.svg" alt="tiger"></br>
+                        <img src="assets/elephant.svg" alt="elephant"> beats <img src="assets/lion.svg" alt="lion"></br>
+                        <b> However! </b></br>
+                        <img src="assets/rat.svg" alt="rat"> beats <img src="assets/elephant.svg" alt="elephant">
+                    </p>
+                    <p>
+                        <img src="assets/rat.svg" alt="rat"> can move freely in water.</br>
+                        <img src="assets/lion.svg" alt="lion"> and <img src="assets/tiger.svg" alt="tiger"> can jump over the river, horizontally and vertically. But only if no <img src="assets/rat.svg" alt="rat"> is in their way.</br>
+                        <img src="assets/rat.svg" alt="rat"> Cannot capture while emerging from or entering water.</br>
+
+                        A piece trapped in an opponent's <img src="assets/trap.svg" alt="trap"> can be captured by any animal.
+                    </p>
+                    <p>
+                        The first player to either capture all opponent's animals or enter the opponent's <img src="assets/den.svg" alt="den"> wins!
+                    </p>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
